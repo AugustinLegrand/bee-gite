@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    min-width: 100%;
+}
+
+.header {
+    padding: 10px;
+    padding-bottom: 15px;
+    background-color: rgb(46, 46, 79);
+    color: #FFFFFF;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.header-description {
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.main {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gite {
+    margin-bottom: 15px;
+}
+
+.gite-header-title {
+    font-size: 2.25em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(193, 139, 2);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    margin: 5px;
+}
+
+.equipments {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.equipments-title {
+    font-size: 2rem;
+}
+
+.equipments-list {
+    margin-top: 8px;
+}
+
+.equipments-list li {
+    font-size: 1.25rem;
+    opacity: .8;
+    color: rgb(42, 42, 42);
+}
+
+.footer {
+    margin: 20px;
+}
+
+.footer h2 {
+    font-size: 2rem;
+}
+
+.footer p {
+    font-size: 1.25rem;
+}
+
+.footer-activities {
+    margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 600px) {
+    .header-description {
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main {
+        max-width: 80rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+
+    .gite {
+        grid-column: span 4 / span 4;
+    }
+
+    .gallery {
+        grid-column: span 3 / span 3;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .equipments {
+        margin-left: 25px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
